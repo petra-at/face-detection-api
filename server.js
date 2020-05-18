@@ -39,8 +39,8 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,dB)})
 
 app.post('/imageurl',(req,res)=>{image.handleClarifai(req,res)})
 
-app.listen(3002,()=>{
-    console.log('server is listening on port 3002'); 
+app.listen(process.env.PORT||3002,()=>{
+    console.log(`server is listening on port ${process.env.port}`); 
 }); 
 
 
